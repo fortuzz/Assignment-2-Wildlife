@@ -1,3 +1,91 @@
+Tanaka Fortune Singana 
+21665202 
+Headless CMS Website
+Submitted on 23 May 2025
+Website Url: Wildlife Conservative. Org - Wildlife Lives Matter 
+WordPress Url:
+
+Wildlife Conservation Platform 
+This project serves as a digital hub for wildlife conservation awareness combining the content management power of WordPress with the dynamic front-end capabilities of react. The project aims to 
+Educate visitors about endangered species conservation efforts 
+Showcase wildlife protection initiatives and success stories 
+Provide an engaging user experience for conservation content
+Demonstrate modern web development practices by integrating WordPress with react 
+Technologies Used 
+Word Press 6.8.1 (Headless CMS)
+Yoast SEO for content optimization
+Custom post types for wildlife content 
+REST API for front-end 
+
+Frontend
+React  18+ with functional components 
+React Router for navigation
+Axios for API requests
+CSS Modules 
+Netlify for deployment 
+
+Infrastructure
+Netlify for frontend hosting
+Wordpress hosting 
+Github for version control
+
+Word Press backend setup 
+Install required plugins 
+Install Plugins 
+Configure Permalinks
+Enable REST API access
+# Clone the repository
+git clone [your-repo-url]
+cd react-frontend
+
+# Install dependencies
+npm install
+
+# Configure environment variables
+cp .env.example .env
+# Update with your WordPress API endpoint
+
+# Start development server
+npm start
+Deployment Instructions 
+Maintain your existing word press hosting 
+Ensuring REST API is publicly accessible 
+Configure CORS if needed for frontend access
+React Frontend Deployment to Netlify 
+Push your code to Github
+Connect your repository to Netlify 
+Set up NPM run build 
+Set publish directory build 
+Add environment variables matching your .env file 
+import axios from 'axios';
+
+const API_URL = process.env.REACT_APP_WP_API_URL;
+
+// Get all conservation posts
+const fetchPosts = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/wp-json/wp/v2/posts`);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return [];
+  }
+};
+
+// Get single post by slug
+const fetchPostBySlug = async (slug) => {
+  try {
+    const response = await axios.get(
+      `${API_URL}/wp-json/wp/v2/posts?slug=${slug}`
+    );
+    return response.data[0];
+  } catch (error) {
+    console.error('Error fetching post:', error);
+    return null;
+  }
+};
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
