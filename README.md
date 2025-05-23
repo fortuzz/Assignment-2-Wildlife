@@ -3,7 +3,7 @@ Tanaka Fortune Singana
 Headless CMS Website
 Submitted on 23 May 2025
 Website Url: Wildlife Conservative. Org - Wildlife Lives Matter 
-WordPress Url:
+WordPress Url: http://myfirstsite.local/
 
 Wildlife Conservation Platform 
 This project serves as a digital hub for wildlife conservation awareness combining the content management power of WordPress with the dynamic front-end capabilities of react. The project aims to 
